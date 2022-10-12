@@ -18,7 +18,7 @@ net = cv2.dnn.readNetFromDarknet(modelConf, modelWeights)
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
-cap = cv2.VideoCapture('video.mp4')
+cap = cv2.VideoCapture(0)
 
 def findObject(output, video):
     heightV, widthV, channelV = video.shape
